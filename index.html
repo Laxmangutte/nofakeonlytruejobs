@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nofakeonlytruejobs.com</title>
+https://checkout.razorpay.com/v1/checkout.js
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .pay-btn {
+    background: green;
+    color: white;
+    font-size: 16px;
+  }
+  .jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  .job {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Nofakeonlytruejobs.com</h1>
+  <p>Trusted Job Search Platform</p>
+  <div class="card">
+    <h3>Register / Login</h3>
+    <input type="email" id="email" placeholder="Enter Email">
+    <button onclick="saveUser()">Submit</button>
+  </div>
+  <button class="pay-btn" onclick="payNow()">Pay ₹50 for 30 Days Access</button>
+</div>
+<h2 style="text-align:center;">Available Jobs</h2>
+<div class="jobs">
+  <div class="job">
+    <h3>Software Engineer</h3>
+    <p>Pune</p>
+    <button>Apply</button>
+  </div>
+  <div class="job">
+    <h3>Accountant</h3>
+    <p>Mumbai</p>
+    <button>Apply</button>
+  </div>
+  <div class="job">
+    <h3>HR Executive</h3>
+    <p>Delhi</p>
+    <button>Apply</button>
+  </div>
+</div>
+<footer style="text-align:center; padding:10px; background:rgba(0,0,0,0.3);">
+© 2026 Nofakeonlytruejobs.com
+</footer>
+<script>
+function saveUser() {
+  const email = document.getElementById("email").value;
+  if (!email) {
+    alert("Please enter email");
+    return;
+  }
+  localStorage.setItem("userEmail", email);
+  alert("User saved locally");
+}
+function payNow() {
+  const email = localStorage.getItem("userEmail");
+  if (!email) {
+    alert("Please register first");
+    return;
+  }
+  const options = {
+    key: "YOUR_RAZORPAY_KEY_ID",
+    amount: 5000,
+    currency: "INR",
+    name: "Nofakeonlytruejobs.com",
+    description: "30 Days Job Access",
+    handler: function (response) {
+      const today = new Date();
+      const valid = new Date();
+      valid.setDate(today.getDate() + 30);
+      const receipt = `Payment Successful
+Email: ${email}
+Payment ID: ${response.razorpay_payment_id}
+Valid Till: ${valid.toDateString()}`;
+      const blob = new Blob([receipt], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "receipt.txt";
+      link.click();
+      alert("Payment Success! Receipt downloaded.");
+    },
+    prefill: {
+      email: email
+    },
+    theme: {
+      color: "#2563eb"
+    }
+  };
+
+
+  const rzp = new Razorpay(options);
+  rzp.open();
+}
+</script>
+
+</body>
