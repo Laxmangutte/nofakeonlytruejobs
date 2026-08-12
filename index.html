@@ -3,154 +3,290 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nofakeonlytruejobs.com</title>
+<title>Gen-Z-Only | Career Support Platform</title>
 
-<!-- ✅ Razorpay Script -->
-<script src="https://checkout.razorpay.com/v1/checkout
-<!-- ✅ CSS -->
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
-  color: white;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.container {
-  text-align: center;
-  padding: 20px;
+body{
+background:#f5f7fb;
+color:#333;
+line-height:1.6;
 }
 
-.card {
-  background: white;
-  color: black;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-  margin: auto;
+header{
+background:linear-gradient(135deg,#0f172a,#2563eb);
+color:white;
+padding:60px 20px;
+text-align:center;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+header h1{
+font-size:50px;
+margin-bottom:10px;
 }
 
-button {
-  padding: 10px 15px;
-  margin-top: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+header p{
+font-size:18px;
 }
 
-.pay-btn {
-  background: green;
-  color: white;
-  font-size: 16px;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:30px 0;
 }
 
-.jobs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 20px;
+.card{
+background:#fff;
+border-radius:15px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.job {
-  background: white;
-  color: black;
-  padding: 15px;
-  border-radius: 10px;
+.section-title{
+text-align:center;
+margin-bottom:25px;
+color:#2563eb;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.service-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.service-card h3{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+input,textarea,select{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.btn{
+background:#2563eb;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#1d4ed8;
+}
+
+.payment{
+text-align:center;
+}
+
+.payment img{
+max-width:350px;
+width:100%;
+border-radius:15px;
+margin:20px auto;
+display:block;
+}
+
+.upi{
+font-size:22px;
+font-weight:bold;
+color:#16a34a;
+margin-top:10px;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:12px 20px;
+border-radius:8px;
+margin-top:15px;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+.notice{
+background:#e0f2fe;
+border-left:5px solid #0284c7;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<h1>GEN-Z-ONLY</h1>
+<p>Helping Job Seekers Find Genuine Opportunities</p>
+</header>
+
 <div class="container">
-  <h1>Nofakeonlytruejobs.com</h1>
-  <p>Trusted Job Search Platform</p>
 
-  <div class="card">
-    <h3>Register / Login</h3>
-    <input type="email" id="email" placeholder="Enter Email">
-    <button onclick="saveUser()">Submit</button>
-  </div>
-
-  <button class="pay-btn" onclick="payNow()">Pay ₹50 for 30 Days Access</button>
+<div class="card">
+<h2>Welcome to Gen-Z-Only</h2>
+<p>
+We support job seekers through professional resume writing,
+career guidance and affordable job assistance services.
+Our mission is to help candidates reach genuine opportunities.
+</p>
 </div>
 
-<h2 style="text-align:center;">Available Jobs</h2>
+<h2 class="section-title">Our Services</h2>
 
-<div class="jobs">
-  <div class="job">
-    <h3>Software Engineer</h3>
-    <p>Pune</p>
-    <button>Apply</button>
-  </div>
+<div class="services">
 
-  <div class="job">
-    <h3>Accountant</h3>
-    <p>Mumbai</p>
-    <button>Apply</button>
-  </div>
-
-  <div class="job">
-    <h3>HR Executive</h3>
-    <p>Delhi</p>
-    <button>Apply</button>
-  </div>
+<div class="service-card">
+<h3>Resume Writing Service</h3>
+<ul>
+<li>ATS Friendly Resume</li>
+<li>Professional Resume Design</li>
+<li>Fresher Resume Creation</li>
+<li>Experienced Resume Upgrade</li>
+<li>PDF Resume Delivery</li>
+</ul>
 </div>
 
-<footer style="text-align:center; padding:10px; background:rgba(0,0,0,0.3);">
-© 2026 Nofakeonlytruejobs.com
+<div class="service-card">
+<h3>Job Assistance Service</h3>
+<p><strong>Only ₹50</strong></p>
+<ul>
+<li>Verified Job Updates</li>
+<li>Resume Forwarding Support</li>
+<li>Application Guidance</li>
+<li>Interview Tips</li>
+<li>Career Assistance</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Candidate Registration</h2>
+<br>
+
+<form>
+
+<div class="form-group">
+<input type="text" placeholder="Full Name">
+</div>
+
+<div class="form-group">
+<input type="tel" placeholder="Mobile Number">
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Email Address">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="City">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Qualification">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Experience">
+</div>
+
+<div class="form-group">
+<input type="file">
+</div>
+
+https://wa.me/918208451840
+
+</form>
+
+<div class="notice">
+After clicking Submit Profile, please send your details and resume on WhatsApp.
+</div>
+
+</div>
+
+<div class="card payment">
+
+<h2>Job Assistance Payment</h2>
+
+<p><strong>Fee: ₹50 Only</strong></p>
+
+GooglePay_QR.pngUPI QR Code">
+
+<p class="upi">
+UPI ID: laxmanw705-2@oksbi
+</p>
+
+<p>
+Scan the QR code using any UPI application and complete payment.
+</p>
+
+<p>
+After payment, send screenshot on WhatsApp.
+</p>
+
+https://wa.me/918208451840>
+
+</div>
+
+<div class="card contact">
+
+<h2>Contact Information</h2>
+
+<p><strong>WhatsApp:</strong> 8208451840</p>
+
+<p><strong>Email:</strong> Laxmanw705@gmail.com</p>
+
+<p><strong>UPI ID:</strong> laxmanw705-2@oksbi</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Gen-Z-Only | Helping Job Seekers Find Genuine Opportunities
 </footer>
-
-<!-- ✅ JAVASCRIPT -->
-<script>
-function saveUser() {
-  const email = document.getElementById("email").value;
-  if (!email) {
-    alert("Please enter email");
-    return;
-  }
-  localStorage.setItem("userEmail", email);
-  alert("User saved");
-}
-
-function payNow() {
-  const email = localStorage.getItem("userEmail");
-
-  if (!email) {
-    alert("Please register first");
-    return;
-  }
-
-  const options = {
-    key: "YOUR_RAZORPAY_KEY_ID",
-    amount: 5000,
-    currency: "INR",
-    name: "Nofakeonlytruejobs.com",
-    description: "30 Days Job Access",
-
-    handler: function (response) {
-      alert("Payment Successful! ID: " + response.razorpay_payment_id);
-    },
-
-    prefill: {
-      email: email
-    },
-
-    theme: {
-      color: "#2563eb"
-    }
-  };
-
-  const rzp = new Razorpay(options);
-  rzp.open();
-}
-</script>
 
 </body>
 </html>
